@@ -1,0 +1,8 @@
+
+{% if not page.parent.children.isFirst(page.path) %}
+   <a class="nav nav-prev" href=" {{ page.parent().children().nextSibling(page.path).url }}"><i class="fa fa-chevron-left"></i></a>
+{% endif %}
+
+{% if not page.parent.children.isLast(page.path)%}
+   <a class="nav nav-next" href="{{ page.parent().children().prevSibling(page.path).url }}"><i class="fa fa-chevron-right"></i></a>
+{% endif %}

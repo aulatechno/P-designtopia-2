@@ -1,0 +1,55 @@
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top">
+  <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}"><img src="{{ theme_url }}/media/icon/DT_black-icon-transparent.png" alt="">DESiGNTOPiA</a>
+
+  <div class="navbar-collapse justify-content-end hidden-md-down">
+    <ul class="navbar-nav nav">
+      {% for page in pages.children.visible %}
+      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+        <li class="nav-item {{ current_page }}">
+          <a href="{{ page.url }}">
+            {{ page.menu }}
+          </a>
+        </li>
+      {% endfor %}
+
+      {% for mitem in site.menu %}
+      <li class="nav-item">
+        <a href="{{ mitem.url }}">
+          {{ mitem.text }}
+        </a>
+      </li>
+      {% endfor %}
+
+      {% if config.plugins.login.enabled and grav.user.username %}
+      <li class="login-nav-item"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <button class="navbar-toggler navbar-toggler-right hidden-lg-up font-30" onclick="openNav()"><i class="fa fa-bars"></i></button>
+
+  <div id="myNav" class="overlay hidden-lg-up">
+    <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}"><img src="{{ theme_url }}/media/icon/DT_white-icon-transparent.png" alt="">DESiGNTOPiA</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      {% for page in pages.children.visible %}
+      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+      <a href="{{ page.url }}" class="{{ current_page }}">
+          {{ page.menu }}
+      </a>
+      {% endfor %}
+
+      {% for mitem in site.menu %}
+      <a href="{{ mitem.url }}">
+          {{ mitem.text }}
+      </a>
+      {% endfor %}
+
+      <ul class="list-inline social-icon">
+        <li class="list-inline-item"><a href="https://www.facebook.com/Designtopia.id" target="_blank" class="fa fa-facebook"></a></li>
+        <li class="list-inline-item"><a href="https://twitter.com/designtopia_id" target="_blank" class="fa fa-twitter"></a></li>
+        <li class="list-inline-item"><a href="https://www.instagram.com/designtopia.id/" target="_blank" class="fa fa-instagram"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

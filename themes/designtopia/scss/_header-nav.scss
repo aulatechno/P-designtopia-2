@@ -1,0 +1,127 @@
+a.navbar-brand {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+.navbar {
+  background: #fff;
+  padding: .5rem 1rem;
+  transition: all 0.8s;
+
+  &-brand {
+    img {
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.nav-up {
+  top: -70px;
+}
+
+.overlay {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #4e91be;
+  overflow-y: scroll;
+  transition: 1s;
+
+  & &-content {
+    position: relative;
+    top: 8%;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 15px;
+
+    a {
+      text-decoration: none;
+      font-size: 6vh;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+      font-weight: 300;
+
+      &:hover,
+      &:focus {
+        color: #3f3f3f;
+      }
+    }
+
+    .social-icon {
+      text-align: left;
+      margin-top: 25vh;
+      margin-left: 15px;
+
+      li {
+        margin-right: 5%;
+      }
+    }
+  }
+
+  a {
+    color: #464a4c;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .navbar-brand{
+    color: white;
+    font-size: 22px;
+    margin-top: 12px;
+    margin-left: 15px;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: -13px;
+    right: 22px;
+    font-size: 60px;
+  }
+}
+
+
+
+
+
+
+.post_navigation {
+  position: static;
+  margin-right: 0 !important;
+  width: 100%;
+  display: table;
+
+  .nav {
+    font-size: 25px;
+    height: 100px;
+    width: 50%;
+    text-align: center;
+    display: table-cell;
+    position: static;
+    top: auto;
+    line-height: 100px;
+    padding-top: 0;
+
+    > i {
+      display: inline-block;
+      color: #ddd;
+
+      &:hover{
+        color: #999;
+      }
+    }
+  }
+}

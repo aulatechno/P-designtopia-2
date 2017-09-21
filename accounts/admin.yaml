@@ -1,0 +1,25 @@
+email: budi03@gmail.com
+fullname: KeiJr
+title: Administrator
+state: enabled
+access:
+  admin:
+    super: 'true'
+    login: 'true'
+    cache: 'true'
+    configuration: 'true'
+    configuration_system: 'true'
+    configuration_site: 'true'
+    configuration_media: 'true'
+    configuration_info: 'true'
+    settings: 'true'
+    pages: 'true'
+    maintenance: 'true'
+    statistics: 'true'
+    plugins: 'true'
+    themes: 'true'
+    users: 'true'
+  site:
+    login: 'true'
+hashed_password: $2y$10$NfiBZxjmL1IFbCpMbbEczOQa3nrZjcAQkAoe2NO0cGZR.P.McC3eS
+language: en

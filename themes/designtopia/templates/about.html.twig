@@ -1,0 +1,62 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<div class="about">
+  <div class="section-header">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-end">
+        <div class="col-12 col-md-6 text-center">
+          <h1>{{ page.header.title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-content">
+    <div class="container-fluid">
+      <div class="row who-we-are align-items-center">
+        <div class="col-12 col-md-7 kiri">
+          <h3>{{ page.header.dt_whoweare.title }}</h1>
+          <p>{{ page.header.dt_whoweare.subheading|markdown }}</p>
+        </div>
+        <div class="col-12 col-md-5 kanan text-center s-reveal">
+
+          <img class="img-fluid" src="{{ theme_url }}{{ page.header.dt_whoweare.dt_icon }}">
+
+        </div>
+      </div>
+
+
+      <div class="row what-we-do">
+        <div class="col-12 opa s-reveal">
+          <h3>{{ page.header.dt_whatwedo.title }}</h1>
+          <p>{{ page.header.dt_whatwedo.subheading|markdown }}</p>
+        </div>
+      </div>
+
+      <div class="container s-reveal">
+        <div class="row opti">
+          <div class="col-12 col-md-6 text-right">
+            <h3>{{ page.header.dt_opti.title }}</h3>
+          </div>
+          <div class="col-12 col-md-6 text-left">
+            <p>{{ page.header.dt_opti.kategori }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if config.plugins.admin.enabled and authorize(['admin.pages', 'admin.super']) %}
+    {% if page.link == '/' %}
+        {% set editPagePath = "/" ~ page.slug %}
+    {% else %}
+        {% set editPagePath = uri.path %}
+    {% endif %}
+
+    <a class="editpage" href="{{ base_url }}/admin/pages{{ editPagePath }}">Edit</a>
+{% endif %}
+
+{% endblock %}

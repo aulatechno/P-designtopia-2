@@ -1,0 +1,146 @@
+////
+ // --------------------------------------------------------------------------
+ // Halaman Error 404
+ // --------------------------------------------------------------------------
+ //
+.fzf {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+
+////
+ // --------------------------------------------------------------------------
+ // Tombol User Edit Frontend
+ // --------------------------------------------------------------------------
+ //
+ a {
+   &.editpage {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     padding: 5px 30px;
+     background: #F67E40;
+     color: #fff;
+     display: block;
+     font-weight: bold;
+     text-decoration: none;
+     text-transform: uppercase;
+     z-index: 1;
+   }
+
+   &:hover {
+     color: inherit;
+   }
+ }
+
+
+
+
+////
+ // --------------------------------------------------------------------------
+ // GRAV Login
+ // --------------------------------------------------------------------------
+ //
+.login-nav-item {
+  span {
+    font-size: 20px;
+  }
+
+  a {
+    color: #333;
+    font-size: 20px;
+  }
+}
+
+#grav-login {
+    max-width: 30rem;
+    margin: 5rem auto;
+    background: #fcfcfc;
+    border: 4px solid #eee;
+    border-radius: 4px;
+    padding: 1rem 3rem 3rem 3rem;
+    text-align: center;
+
+    .form-actions {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .alert.info {
+        color: #27ae60;
+    }
+
+    .alert.error {
+        color: #e74c3c;
+    }
+
+    p {
+        font-size: small;
+        margin: 1rem 0;
+        padding: 0;
+        text-align: center;
+    }
+    .form-actions p {
+        margin-bottom: 0;
+    }
+
+    .button {
+        vertical-align: middle;
+    }
+
+    .delimiter {
+        display: block;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+        position: relative;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+
+    .delimiter:after,
+    .delimiter:before {
+        background-color: #777777;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0.8rem;
+        width: 40%;
+    }
+    .delimiter:before {
+        background-image: -moz-linear-gradient(right center , #777777, #ffffff);
+        left: 0;
+    }
+    .delimiter:after {
+        background-image: -moz-linear-gradient(left center , #777777, #ffffff);
+        right: 0;
+    }
+
+    .rememberme {
+        display: inline-block;
+        float: left;
+        padding: 7px 0;
+        vertical-align: middle;
+    }
+
+    .rememberme label {
+        font-weight: inherit;
+        display: inline;
+    }
+}
+
+#grav-logout {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.user-profile {
+  margin: 5rem auto;
+  max-width: 900px;
+
+  .buttons {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,92 @@
+@media (min-width: 768px) {
+  a.navbar-brand {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+  }
+
+  .navbar {
+    padding: .8rem 1rem;
+
+    &-nav {
+      font-weight: 500;
+    }
+
+    &-brand {
+      font-size: 26px;
+      font-weight: 900;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+
+    .nav-item {
+      a {
+        color: #333;
+        font-size: 20px;
+        margin: 0 25px 0 25px;
+
+        &:hover {
+          color: #4e91be;
+          text-decoration: none;
+        }
+      }
+
+      &.active a{
+        color: #4e91be;
+      }
+    }
+  }
+
+  //
+  // Post navigation
+  // Navigasi kanan kiri di setiap post
+  //
+  .post_navigation {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    .nav {
+      font-size: 60px;
+    }
+  }
+
+  /*.navigation {
+    .nav {
+      font-size: 50px;
+      text-align: center;
+      height: 100%;
+      width: 4rem;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+      display: table;
+
+      &:hover {
+        background: transparent;
+        text-decoration: none;
+      }
+
+      > i {
+        color: #2E4453;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+
+        &:hover {
+          color:#949494;
+        }
+      }
+
+      &.nav-pref {
+        left: 0;
+      }
+
+      &.nav-next {
+        right: 0;
+      }
+    }
+  }*/
+}

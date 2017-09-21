@@ -1,0 +1,25 @@
+title: Service Item
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.dt_icon:
+              ordering@: 1
+              type: text
+              label: Icon
+              style: vertical
+
+            header.dt_ringkasan:
+              ordering@: 2
+              type: text
+              label: Descriptions
+              style: vertical

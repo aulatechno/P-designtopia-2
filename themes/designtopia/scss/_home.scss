@@ -1,0 +1,217 @@
+.home {
+  // Home-About
+  &-about {
+    font-weight: 300;
+
+    background-image: url('../media/bg/designtopia-header.gif');
+    background-attachment: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 180px;
+    padding-bottom:100px;
+    padding-right: 7px;
+  }
+
+  .parallax {
+    @extend %parallax;
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/c06f9e53178793.592b68a862819.jpg");
+    height: 250px;
+  }
+
+  // Home-Service
+  &-service {
+    padding-top: 25px;
+
+    header {
+      margin-bottom: 30px;
+      align-items: flex-start;
+      text-align: left;
+      padding-left: 5px;
+
+      .title {
+        color: #428ce0;
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      p {
+        color: #666;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .item {
+      margin-bottom: 20px;
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      img {
+        width: 60px;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        color: #555;
+        font-size: 12px;
+      }
+    }
+
+    footer {
+      p {
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 20px;
+
+        span {
+          border: 3px solid #555;
+          border-radius: 5px;
+          padding: 3px 15px;
+
+          &:hover {
+            background: #428ce0;
+            border: 3px solid #428ce0;
+          }
+        }
+
+        a {
+          color: #555;
+          font-size: 18px;
+          font-weight: bold;
+
+          &:hover{
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  // Home-Projects
+  &-projects {
+    padding-top: 25px;
+    padding-bottom: 50px;
+
+    header {
+      align-items: flex-start;
+      text-align: left;
+      padding-left: 5px;
+
+      .title {
+        color: #428ce0;
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      p {
+        color: #666;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .item {
+      padding: 0;
+
+      .portfolio-thumb {
+        position: relative;
+        padding: 0;
+
+        .portfolio-overlay {
+          color: #fff;
+          background: #333;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          vertical-align: top;
+          opacity: 0;
+          transition: all 0.4s ease-in-out;
+        }
+
+        &:hover .portfolio-overlay {
+          opacity: 0.9;
+        }
+
+        .portfolio-item {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+
+          h3{
+            font-size: 18px;
+            margin-bottom: 0;
+          }
+
+          small {
+            color: #fff;
+            font-size: 10px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    footer {
+      p {
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 50px;
+
+        span {
+          border: 3px solid #555;
+          border-radius: 5px;
+          padding: 3px 15px;
+
+          &:hover {
+            background: #428ce0;
+            border: 3px solid #428ce0;
+          }
+        }
+
+        a {
+          color: #555;
+          font-size: 18px;
+          font-weight: bold;
+
+          &:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.bogel_maps {
+  @extend %parallax;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/c06f9e53178793.592b68a862819.jpg");
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .map > h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

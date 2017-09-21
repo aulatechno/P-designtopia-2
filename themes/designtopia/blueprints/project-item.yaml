@@ -1,0 +1,28 @@
+title: Project Item
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.subheading:
+              ordering@: 1
+              type: text
+              label: Subheading
+              style: vertical
+
+            header.dt_thumb:
+              ordering@: 2
+              type: text
+              label: Thumbnail
+              help: Upload thumb.jpg, lalu kosongkan kotak ini atau masukkan url. Ukuran max 720p dengan ratio 6:9.
+              default: thumb.jpg
+              autofocus: true
+              style: vertical

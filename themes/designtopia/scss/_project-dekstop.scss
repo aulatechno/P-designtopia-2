@@ -1,0 +1,60 @@
+@media (min-width: 768px) {
+  .projects {
+    .section-header {
+      padding: 200px 5px 130px;
+
+      h1 {
+        color: #292b2c;
+        font-size: 48px;
+        line-height: 4.2rem;
+        max-width: 1000px;
+      }
+    }
+
+    .section-content {
+      padding-bottom: 80px;
+
+      .item {
+        padding: 5px;
+
+        .portfolio-thumb {
+          .portfolio-item {
+            h3 {
+              font-size: 25px;
+              font-weight: 300;
+            }
+
+            small {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+
+
+    // Projects-Item
+    &-item {
+      padding-top: 150px;
+
+      .section-header{
+        padding-bottom: 150px;
+
+        .header-title {
+          font-size: 48px;
+        }
+
+        .header-subheading {
+          font-size: 21px;
+        }
+      }
+
+      .section-content {
+        p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

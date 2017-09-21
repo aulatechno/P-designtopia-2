@@ -1,0 +1,86 @@
+.about {
+  background-color: #F0F8FF;
+  padding-bottom: 25px;
+
+  .container {
+    max-width: 820px;
+  }
+
+  .section-header {
+    color: #fff;
+    background-image: url("../media/bg/pexels-photo-398532.jpeg");
+    background-size: cover;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    padding: 140px 5px 50px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .section-content {
+    color: rgba(55,66,72,.85);
+    font-weight: 300;
+    font-size: 15px;
+
+    .who-we-are {
+      background-color: #f3f3f3;
+
+      h3 {
+        color: #3eaaaf;
+      }
+    }
+
+    .kiri {
+      padding: 25px 15px;
+    }
+
+    .kanan {
+      display: none;
+
+      .img-fluid {
+        height: 200px;
+      }
+    }
+
+    .what-we-do {
+      background-image: url("../media/bg/designtopia-about.jpg");
+      background-attachment: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+
+      .opa {
+        background-color: #000;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.7;
+        padding: 25px 15px;
+
+        h3 {
+          color: #3eaaaf;
+        }
+      }
+    }
+
+    .opti {
+      margin-top: 25px;
+
+      .text-right,
+      .text-left {
+        text-align: center !important;
+      }
+
+      h3 {
+        color: #3eaaaf;
+      }
+    }
+  }
+}

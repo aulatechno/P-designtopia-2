@@ -1,0 +1,126 @@
+// Load Third Party Libraries
+@import "configuration/template/base";
+@import "template/modules/bourbon_essentials";
+@import "template/modules/buttons";
+
+// Logo
+$logo-bg:                       #23282d !default;
+$logo-link:                     #ffffff !default;
+
+// Nav
+$nav-bg:                        #23282d !default;
+$nav-text:                      #afc7d5 !default;
+$nav-link:                      #d1dee7 !default;
+$nav-selected-bg:               #32373c !default;
+$nav-selected-link:             #ffffff !default;
+$nav-hover-bg:                  #32373c !default;
+$nav-hover-link:                #ffffff !default;
+
+// Toolbar
+$toolbar-bg:                    #32373c !default;
+$toolbar-text:                  #ffffff !default;
+
+// Page
+$page-bg:                       #F1F1F1 !default;
+$page-text:                     #81a5b5 !default;
+$page-link:                     #aad9ed !default;
+
+// Content
+$content-bg:                    #fff !default;
+$content-text:                  #737c81 !default;
+$content-link:                  #0073aa !default;
+$content-link2:                 #da4b46 !default;
+$content-header:                #314d5b !default;
+$content-tabs-bg:               #32373c !default;
+$content-tabs-text:             #d1dee7 !default;
+
+// Buttons
+$button-bg:                     #0073aa !default;
+$button-text:                   #ffffff !default;
+
+// Notice
+$notice-bg:                     #fff !default;
+$notice-text:                   #676f74 !default;
+
+// Updates
+$update-bg:                     $content-bg !default;
+$update-text:                   #23282d !default;
+$update-button-bg:               #32373c !default;
+
+// Critical
+$critical-bg:                   #da4b46 !default;
+$critical-text:                 #ffffff !default;
+
+// Calculated values
+$primary-accent:                button   !default;
+$secondary-accent:              notice   !default;
+$tertiary-accent:               critical !default;
+
+// Initial values
+$primary-accent-bg:             $notice-bg;
+$primary-accent-fg:             $notice-text;
+$secondary-accent-bg:           $notice-bg;
+$secondary-accent-fg:           $notice-text;
+$tertiary-accent-bg:            $notice-bg;
+$tertiary-accent-fg:            $notice-text;
+
+$element-map: (
+    button: $button-bg $button-text,
+    notice: $notice-bg $notice-text,
+    content: $content-bg $content-text,
+    tabs: $content-tabs-bg $content-tabs-text,
+    update: $update-bg  $update-text,
+    critical: $critical-bg $critical-text,
+    page: $page-bg $page-text,
+    nav: $nav-bg $nav-text,
+    toolbar: $toolbar-bg $toolbar-text,
+    logo: $logo-bg $logo-link
+);
+
+// Calon Hapus
+// Set based on configuration
+// @each $element, $element-parts in $element-map {
+//     @if $primary-accent == $element {
+//         $primary-accent-bg: nth($element-parts, 1);
+//         $primary-accent-fg: nth($element-parts, 2);
+//     }
+// }
+//
+// @each $element, $element-parts in $element-map {
+//     @if $secondary-accent == $element {
+//         $secondary-accent-bg: nth($element-parts, 1);
+//         $secondary-accent-fg: nth($element-parts, 2);
+//     }
+// }
+//
+// @each $element, $element-parts in $element-map {
+//     @if $tertiary-accent == $element {
+//         $tertiary-accent-bg: nth($element-parts, 1);
+//         $tertiary-accent-fg: nth($element-parts, 2);
+//     }
+// }
+
+$form-border: #f00;
+$form-field-bg: #00f;
+$form-field-text: #0f0;
+$underline: #ff0;
+$subtle-text: #0ff;
+$ir-slider-bg: #f0f;
+
+@if (lightness($content-bg) < 50) {
+    $form-border: lighten($content-bg, 15%);
+    $form-field-bg: darken($content-bg, 3%);
+    $ir-slider-bg: lighten($content-bg, 2%);
+    $form-field-text: lighten($content-text, 5%);
+    $underline: darken($content-bg, 10%);
+    $subtle-text: darken($content-text, 10%);
+} @else {
+    $form-border: darken($content-bg, 10%);
+    $form-field-bg: lighten($content-bg, 3%);
+    $ir-slider-bg: darken($content-bg, 2%);
+    $form-field-text: darken($content-text, 1%);
+    $underline: darken($content-bg, 5%);
+    $subtle-text: lighten($content-text, 10%);
+}
+
+$form-border-width: 1px;

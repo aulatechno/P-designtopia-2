@@ -1,0 +1,22 @@
+.contact {
+  .section-header {
+    background: linear-gradient(to right, #2e4453, rgba(46, 68, 83, 0)), #2e4453 url("../media/bg/apple-691323_1920.jpg");
+    background-position: center center;
+    background-size: cover;
+
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    padding: 140px 5px 50px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .section-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

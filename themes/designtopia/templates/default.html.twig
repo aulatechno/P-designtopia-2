@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	{{ page.content }}
+
+	{% if config.plugins.admin.enabled and authorize(['admin.pages', 'admin.super']) %}
+	    {% if page.link == '/' %}
+	        {% set editPagePath = "/" ~ page.slug %}
+	    {% else %}
+	        {% set editPagePath = uri.path %}
+	    {% endif %}
+
+	    <a class="editpage" href="{{ base_url }}/admin/pages{{ editPagePath }}">Edit</a>
+	{% endif %}
+	
+{% endblock %}

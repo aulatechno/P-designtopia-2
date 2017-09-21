@@ -1,0 +1,84 @@
+title: About Us
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.title:
+              autofocus: false
+
+            content:
+              unset@: true
+
+            uploads:
+              unset@: true
+              
+            whoweare:
+              type: section
+              title: 1st Place
+              underline: true
+
+              fields:
+                header.dt_whoweare.title:
+                  type: text
+                  label: Title
+                  style: vertical
+                  validate:
+                    type: text
+
+                header.dt_whoweare.subheading:
+                  type: editor
+                  label: Subheading
+                  validate:
+                    required: true
+                    type: textarea
+                    
+            whatwedo:
+              type: section
+              title: 2nd Place
+              underline: true
+
+              fields:
+                header.dt_whatwedo.title:
+                  type: text
+                  label: Title
+                  style: vertical
+                  validate:
+                    required: true
+                    type: text
+
+                header.dt_whatwedo.subheading:
+                  type: editor
+                  label: Subheading
+                  validate:
+                    required: true
+                    type: textarea
+
+            opti:
+              type: section
+              title: 3rd Place
+              underline: true
+
+              fields:
+                header.dt_opti.title:
+                  type: text
+                  label: Title
+                  style: vertical
+                  validate:
+                    required: true
+                    type: text
+
+                header.dt_opti.kategori:
+                  type: editor
+                  label: Kategori
+                  validate:
+                    required: true
+                    type: textarea

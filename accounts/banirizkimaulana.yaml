@@ -1,0 +1,15 @@
+email: banirizkimaulana@gmail.com
+fullname: Bani
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: 'true'
+    cache: 'true'
+    pages: 'true'
+    maintenance: 'true'
+    statistics: 'true'
+  site:
+    login: 'true'
+hashed_password: $2y$10$YQ/Rs/ZoRwG8mplTnkipWuAccw/vDNvzRTqZko2.PbuWYpmbr131C
+language: en

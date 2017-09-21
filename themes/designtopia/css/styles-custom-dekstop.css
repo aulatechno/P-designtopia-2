@@ -1,0 +1,164 @@
+@media (min-width: 768px){
+	/*.home-about{
+	  /background-attachment: fixed;
+	  padding-top: 380px;
+	  padding-bottom:380px;
+	}*/
+	.contact .form-group{
+	  padding: 25px 0 10px;
+	}
+	.contact .form-control{
+	  font-weight: 300;
+	}
+	.contact .row{
+	  margin-top : 100px;
+	}
+
+	.contact {
+		margin-bottom: 100px;
+	}
+	/*
+	.service-item .section-content .flex-first{
+	  order: -1;
+	}
+	.service-item .fa{
+	  font-size: 50px;
+	}
+	.service-item table{
+	  font-size: inherit;
+	}*/
+
+	/*#body .service-item  .section-content .nav {
+	  position: fixed;
+	  top: 0;
+	  bottom: 0;
+	  width: 4rem;
+	  font-size: 50px;
+	  height: 100%;
+	  cursor: pointer;
+	  display: table;
+	  text-align: center;
+	}
+
+	#body .service-item  .section-content .nav > i {
+	  display: table-cell;
+	  vertical-align: middle;
+	  text-align: center;
+	  color: #3C576B;
+	}
+	#body .service-item  .section-content .nav:hover {
+	  background: transparent;
+	  text-decoration: none;
+	}
+
+	#body .service-item  .section-content .nav.nav-pref {
+	  left: 0;
+	}
+
+	#body .service-item  .section-content .nav.nav-next {
+	  right: 0;
+	}
+
+	#body .service-item .section-content .nav > i {
+      color: #2E4453;
+	}
+	#body .service-item .section-content .nav > i:hover {
+	  color:#949494;
+	}*/
+
+/********* style desktop css .projects-item  **/
+	/*
+	#body .projects-item {
+	  padding-top: 150px;
+	}
+	#body .projects-item .header-title{
+	  padding-bottom: 50px;
+	}
+	#body .projects-item .header-title h2{
+      font-weight: normal;
+	}
+	#body .projects-item .header-title h4{
+	  font-weight: normal;
+	}
+	#body .projects-item p {
+	  font-size: 20px;
+ 	  line-height: 30px;
+	}	*/
+
+
+	/*
+	.service .section-content .breadcrumb{
+	  font-size: inherit;
+	}
+
+	.navbar-brand img {
+	  width: 30px;
+	  margin-right: 20px;
+	}	*/
+
+	/*
+	 * About pindah ke SASS
+	 *
+	.contact,
+	.about{
+	  margin-bottom: 100px;
+	}	*/
+
+	/*
+	 * Terlalu umum, dan tidak spesifik mengarah ke halaman contact
+	 * Ada kemungkinan semua bisa kena
+	 *
+	.form-control::placeholder{
+	  font-size:25px;
+	}
+	input.form-control,
+	textarea.form-control{
+	  font-size:25px;
+	}	*/
+
+	/*
+	.about .section-header{
+  	  background-attachment: absolute;
+	  background-position: center center;
+	  font-size: 60px;
+	  padding-top: 200px;
+	  padding-bottom: 130px;
+	}	*/
+
+
+	/*
+	a.navbar-brand {
+      font-weight: 900;
+      letter-spacing: 1.5px;
+	}	*/
+	/*
+	.about .section-content p,
+	.about .section-content .what-we-do{
+	  font-size: 17px;
+	}
+	.about .section-content .what-we-do{
+	  background-attachment: fixed;
+	}
+	.about .section-content .kiri{
+	  padding: 100px 0px 100px 100px;
+	}
+	.about .section-content .kanan{
+	  display: block;
+	  padding: 0 10px;
+	}
+	.opa{
+	  padding: 100px 25%;
+	}
+	.opti{
+	  margin-top: 100px;
+	}
+	.opti .text-right{
+	  text-align: right !important;
+	}
+	.opti .text-left{
+	  text-align: left !important;
+	}	*/
+
+
+
+}

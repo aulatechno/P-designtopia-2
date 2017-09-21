@@ -1,0 +1,31 @@
+// compileNested: ../css/$1.css
+body {
+  color: #0c0c0c;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+
+@import "utilities";
+
+@import "header-nav";
+@import "header-nav-dekstop";
+@import "home";
+@import "home-dekstop";
+@import "service";
+@import "service-dekstop";
+@import "project";
+@import "project-dekstop";
+@import "about";
+@import "about-dekstop";
+@import "contact";
+@import "contact-dekstop";
+@import "faq-tos";
+@import "footer";
+@import "footer-dekstop";
+
+@import "extensions";

@@ -1,0 +1,326 @@
+/*.home .parallax mark {
+background: #fff;
+line-height: 39px;
+color: #689ab2;
+
+}
+
+.home-about{
+  background-attachment: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 180px;
+  padding-bottom:150px;
+}*/
+
+.bor-top{
+  border-top: 2px solid #999;
+}
+.bor-bottop{
+  border-bottom: 2px solid #999;
+  border-top: 2px solid #999;
+}
+.contact{
+  margin-bottom: 25px;
+}
+
+.contact .row{
+  margin-top: 25px;
+}
+.contact .form-group{
+  padding: 10px 0;
+  border-radius: 0;
+}
+.contact .form-control{
+  border: none;
+  font-weight: 100;
+}
+.contact p .statusMsg{
+  font-size:18px;
+}
+.contact p .succdiv{
+  color: #008000;
+}
+.contact p .errordiv{
+  color: #E80000;
+}
+.contact input[type="submit"] {
+  width: 100%;
+  border-bottom: 1px solid #777;
+  border-radius: 0;
+}
+.contact input[type="submit"]:hover {
+  background: #000;
+  color: #fff;
+  border-color: #777;
+  border-radius: 0;
+}
+
+.navbar-toggler-right {
+  margin-top: 5px;
+}
+/*
+#body .service-item  .section-content .navigation {
+  position: static;
+  margin-right: 0 !important;
+  width: 100%;
+  display: table;
+}
+
+#body .service-item  .section-content .nav {
+  display: table-cell;
+  position: static;
+  top: auto;
+  width: 50%;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  padding-top: 0;
+  font-size: 25px;
+}
+
+#body .service-item  .section-content .nav > i {
+  display: inline-block;
+  color: #ddd;
+}
+
+#body .service-item  .section-content .nav > i:hover{
+  color: #999;
+}*/
+
+/********* style mobile css .projects-item  **/
+/*
+#body .projects-item {
+  padding-top: 100px;
+}
+
+#body .projects-item .header-title{
+  padding-bottom: 20px;
+}
+#body .projects-item .header-title h2{
+  font-weight: 100;
+}
+#body .projects-item .header-title h4{
+  font-weight: 100;
+}
+#body .projects-item p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: 15px;
+  padding-right: 15px;
+}*/
+
+
+
+/*
+.service-item .section-content .flex-first{
+  order: 0;
+}
+.service-item a {
+  padding: 30px 0;
+}
+.service-item .fa{
+  font-size: 30px;
+}
+.service-item table{
+  font-size: 14px;
+}
+*/
+
+/* Pindah ke SASS
+a.navbar-brand {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}*/
+
+/* Pindah ke SASS
+.contact .section-header{
+  background-position: center center;
+  background-size: cover;
+
+  invalid property value
+  https://www.w3schools.com/cssref/pr_background-attachment.asp
+  background-attachment: absolute;
+}*/
+
+/*
+ * Terlalu umum, ada kemungkinan semua bisa kena.
+ *
+header button{
+  margin-top: 5px;
+}*/
+
+
+
+/*
+.about .section-content p,
+.about .section-content .what-we-do{
+  font-size: 14px;
+}
+
+.about .section-content .who-we-are{
+  background-color: #f3f3f3;
+}
+.about .section-content .kiri{
+  padding: 25px 15px;
+}
+.about .section-content .kanan{
+  display: none;
+}
+.about .section-content .kanan .img-fluid{
+  height: 200px;
+}
+.about .section-content .what-we-do{
+  background-image: url("../media/bg/designtopia-home.jpg");
+  background-attachment: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.opa{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  background-color: #000;
+  padding: 25px 15px;
+}
+.opti{
+  margin: 25px 0;
+}
+.opti .text-right,
+.opti .text-left{
+  text-align: center !important;
+}*/
+
+/********overlay menu navigasi**********/
+/*
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: #2F999A;
+  overflow-y: hidden;
+  transition: 0.8s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+  font-weight: 300;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #3f3f3f;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 60px;
+}*/
+
+/*
+.service-item .section-header{
+  padding-bottom:20px;
+  padding-top: 90px;
+}*/
+
+
+/*
+.overlay .navbar-brand{
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.overlay .navbar-brand img {
+  margin-right: 5px;
+}*/
+
+@media only all and (max-width: 59.938em) {
+/*
+  #body .service-item  .section-content .navigation {
+    position: static;
+    margin-right: 0 !important;
+    width: 100%;
+    display: table;
+  }*/
+}
+
+/*
+.service .section-content .breadcrumb{
+	font-size: 14px;
+}
+
+#body .service-item  .section-content .nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  font-size: 50px;
+  height: 100%;
+  cursor: pointer;
+  display: table;
+  text-align: center;
+}
+
+#body .service-item  .section-content .nav > i {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media only all and (max-width: 59.938em) {
+/*
+  #body .service-item  .section-content .nav {
+    display: table-cell;
+    position: static;
+    top: auto;
+    width: 50%;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    padding-top: 0;
+  }
+  #body .service-item  .section-content .nav > i {
+    display: inline-block;
+  }
+}
+
+#body .service-item  .section-content .nav:hover {
+  background: #F6F6F6;
+}
+
+#body .service-item  .section-content .nav.nav-pref {
+  left: 0;
+}
+
+#body .service-item  .section-content .nav.nav-next {
+  right: 0;
+}
+*/

@@ -1,0 +1,48 @@
+@media (min-width: 768px) {
+  .about {
+    padding-bottom: 100px;
+
+    .section-header {
+      padding: 250px 5px 200px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .section-content {
+      font-size: 17px;
+
+      .what-we-do {
+        background-attachment: fixed;
+      }
+
+      .kiri {
+        padding: 100px 0px 100px 100px;
+      }
+
+      .kanan {
+        display: block;
+        padding: 0 10px;
+      }
+
+      .what-we-do {
+        .opa {
+          padding: 100px 25%;
+        }
+      }
+
+      .opti {
+        margin-top: 100px;
+
+        .text-right {
+          text-align: right !important;
+        }
+
+        .text-left {
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}

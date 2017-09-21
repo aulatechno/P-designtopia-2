@@ -1,0 +1,21 @@
+title: Designtopia
+default_lang: en
+author:
+  name: designtopia
+  email: designtopia.id@gmail.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'We make brand strategies and creative design, building brands that connected to people.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
+menu:
+  -
+    url: 'http://blog.designtopia.id/'
+    text: Blog

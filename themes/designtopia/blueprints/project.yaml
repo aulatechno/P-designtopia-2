@@ -1,0 +1,35 @@
+title: Project
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.title:
+              autofocus: false
+
+            content:
+              unset@: true
+
+            uploads:
+              unset@: true
+
+            header.subheading:
+              type: editor
+              label: Descriptions
+              autofocus: true
+              codemirror:
+                mode: 'yaml'
+                indentUnit: 4
+                indentWithTabs: false
+                lineNumbers: true
+                styleActiveLine: true
+                gutters: ['CodeMirror-lint-markers']
+                lint: true

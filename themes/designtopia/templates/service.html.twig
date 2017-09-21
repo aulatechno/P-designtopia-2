@@ -1,0 +1,52 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<div class="service">
+  <div class="section-header">
+    <div class="container">
+      <div class="row flex-column justify-content-center">
+        <h1>{{ page.header.title }}</h1>
+        <p>{{ page.header.dt_ringkasan|markdown }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        {% set collection = page.collection() %}
+
+        {% for post in collection %}
+        <div class="col-4 col-md-3 text-center item">
+          <a href="{{ post.url }}">
+            <img src="{{ post.header.dt_icon }}">
+            <h4>{{ post.title }}</h4>
+          </a>
+        </div>
+        {% endfor %}
+
+        <div class="col-4 col-md-3 text-center item">
+          <a href="#">
+            <img src="media/icon/09-other.svg">
+            <h4>Others</h4>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% if config.plugins.admin.enabled and authorize(['admin.pages', 'admin.super']) %}
+    {% if page.link == '/' %}
+        {% set editPagePath = "/" ~ page.slug %}
+    {% else %}
+        {% set editPagePath = uri.path %}
+    {% endif %}
+
+    <a class="editpage" href="{{ base_url }}/admin/pages{{ editPagePath }}">Edit</a>
+{% endif %}
+
+{% endblock %}

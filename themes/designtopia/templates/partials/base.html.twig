@@ -1,0 +1,114 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+
+    <title>
+    {% if (page.parent.title == 'Pages') or (page.parent.title is empty) %}
+      {{ header.title }} |
+    {% else %}
+      {{ page.parent.title }} - {{ header.title }} |
+    {% endif %}
+      {{ site.title }}
+    </title>
+
+    {% include 'partials/metadata.html.twig' %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://media/icon/DT_black-icon-transparent.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+      {% do assets.addCss('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700', 104) %}
+      {% do assets.addCss('theme://vendor/bootstrap/css/bootstrap.css', 103) %}
+      {% do assets.addCss('theme://vendor/font-awesome/css/font-awesome.min.css', 103) %}
+      {% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css', 103) %}
+      {% do assets.addCss('theme://css/styles.css') %}
+      {% do assets.addCss('theme://css/styles-custom.css', 100) %}
+      {% do assets.addCss('theme://css/styles-custom-dekstop.css', 100) %}
+    {% endblock %}
+    {{ assets.css() }}
+{% endblock head %}
+</head>
+
+
+
+{% if page.header.body_classes %}
+<body id="top" class="{{ page.header.body_classes }}">
+{% else %}
+<body id="top">
+{% endif %}
+
+    <div id="sb-site">
+        {% block header %}
+        <header id="header">
+            {% include 'partials/navigation.html.twig' %}
+        </header>
+        {% endblock %}
+
+        {% block showcase %}{% endblock %}
+
+        {% block body %}
+        <section id="body" class="{{ class }}">
+          {% block content %}{% endblock %}
+        </section>
+        {% endblock %}
+
+        {% block footer %}
+        <div class="footer">
+          <div class="container">
+
+            <div class="row footer-atas">
+              <div class="col-md-3 hidden-sm-down">
+                <img src="{{ theme_url }}/media/icon/DT_white-icon-transparent.png" alt="">
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <p class="hidden-xs-down">Address :</p>
+                <p>Jatibening Estate <br>
+                Jl. Kakatua III Blok B6 No. 10 - 11, Jatibening 17412 <br>
+                Kec. Pondok Gede, Bekasi, Jawa Barat, Indonesia</p>
+              </div>
+
+              <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-6">
+                <p class="hidden-xs-down">Contact Us :</p>
+                <p><a href="mailto:{{"designtopia.id@gmail.com"|safe_email}}">designtopia.id [at] gmail.com</a> <br>
+                +62 878-8286-8287 / +62 878-8870-6394</p>
+              </div>
+            </div>
+
+            <div class="row footer-bawah">
+              <div class="col-md-6 col-sm-6">
+                <div class="footer-copyright">
+                  <p>&copy; 2017 <a href="http://designtopia.id/">DESiGNTOPiA</a>. All Rights Reserved.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <ul class="social-icon">
+                  <li><a href="https://www.facebook.com/Designtopia.id" target="_blank" class="fa fa-facebook"></a></li>
+                  <li><a href="https://twitter.com/designtopia_id" target="_blank" class="fa fa-twitter"></a></li>
+                  <li><a href="https://www.instagram.com/designtopia.id/" target="_blank" class="fa fa-instagram"></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        {% endblock %}
+    </div>
+
+    {% block javascripts %}
+      {% do assets.addJs('jquery', 101) %}
+      {% do assets.addJs('theme://vendor/bootstrap/js/bootstrap.min.js', 100) %}
+      {% do assets.addJs('https://maps.googleapis.com/maps/api/js?key=AIzaSyAFpOZomWTapJSVnM_MigwOa-5bpR8V1VU&callback=initMap', 100) %}
+      {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.5/scrollreveal.min.js', 100) %}
+      {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js', 100) %}
+      {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.0/jquery.nicescroll.min.js', 100) %}
+      {% do assets.addJs('theme://js/designtopia.js', 100) %}
+    {% endblock %}
+    {{ assets.js() }}
+</body>
+</html>

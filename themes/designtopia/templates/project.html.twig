@@ -1,0 +1,70 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+{% set collection = page.collection() %}
+
+<div class="projects">
+
+<div class="section-header">
+<div class="container-fluid">
+<div class="row d-flex justify-content-center">
+  <h1 class="text-center s-reveal">{{ page.header.subheading|markdown }}</h1>
+</div>
+</div>
+</div>
+
+<div class="section-content">
+<div class="container-fluid">
+<div class="row">
+
+{% for post in collection %}
+  <div class="col-6 col-md-4 col-xl-3 item">
+    <a href="{{ post.url }}">
+      <div class="portfolio-thumb">
+
+        {% if post.header.dt_thumb %}
+          <img src="{{ post.url }}/{{ post.header.dt_thumb }}" class="img-fluid">
+        {% else %}
+          <img src="{{ theme_url }}/media/imgnotavailable.svg" class="img-fluid" alt="Portfolio">
+        {% endif %}
+
+        <div class="portfolio-overlay">
+          <div class="portfolio-item">
+            <h3>{{ post.title }}</h3>
+            {% if post.header.subheading %}
+              <small>{{ post.header.subheading }}</small>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </a>
+  </div>
+{% endfor %}
+
+</div>
+</div>
+</div>
+
+
+{# Render the pagination list #}
+{% if config.plugins.pagination.enabled and collection.params.pagination %}
+  {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+{% endif %}
+
+
+</div>
+
+
+{% if config.plugins.admin.enabled and authorize(['admin.pages', 'admin.super']) %}
+    {% if page.link == '/' %}
+        {% set editPagePath = "/" ~ page.slug %}
+    {% else %}
+        {% set editPagePath = uri.path %}
+    {% endif %}
+
+    <a class="editpage" href="{{ base_url }}/admin/pages{{ editPagePath }}">Edit</a>
+{% endif %}
+
+{% endblock %}

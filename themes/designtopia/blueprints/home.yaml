@@ -1,0 +1,103 @@
+title: Home
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.title:
+              autofocus: false
+
+            content:
+              unset@: true
+
+            uploads:
+              unset@: true
+
+            services:
+              title: Services
+              type: section
+              underline: true
+
+              fields:
+                header.home_service.title:
+                  type: text
+                  label: Title
+                  validate:
+                    required: true
+                    type: text
+
+                header.home_service.subheading:
+                  type: text
+                  label: Descriptions
+                  validate:
+                    required: true
+                    type: text
+
+                header.home_service.footer.title:
+                  type: text
+                  label: Footer Title
+                  validate:
+                    required: true
+                    type: text
+
+                header.home_service.footer.url:
+                  type: text
+                  label: Footer URL
+                  validate:
+                    required: true
+                    type: text
+
+            parallax:
+              type: section
+              title: Parallax
+              underline: true
+
+              fields:
+                header.parallax:
+                  label: Descriptions
+                  type: textarea
+                  validate:
+                    required: true
+                    type: textarea
+
+            porto:
+              type: section
+              title: Portofolio
+              underline: true
+
+              fields:
+                header.home_porto.title:
+                  type: text
+                  label: Title
+                  validate:
+                    required: true
+                    type: text
+
+                header.home_porto.subheading:
+                  type: textarea
+                  label: Descriptions
+                  validate:
+                    required: true
+                    type: textarea
+
+                header.home_porto.footer.title:
+                  type: text
+                  label: Footer Title
+                  validate:
+                    required: true
+                    type: text
+
+                header.home_porto.footer.url:
+                  type: text
+                  label: Footer URL
+                  validate:
+                    required: true
+                    type: text

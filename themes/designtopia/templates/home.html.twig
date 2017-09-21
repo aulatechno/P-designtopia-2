@@ -1,0 +1,102 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<div class="home">
+
+<div class="home-about" id="about"></div>
+
+<div class="home-service" id="service">
+  <header class="d-flex flex-column">
+    <div class="title">{{ page.header.home_service.title }}</div>
+    <p>{{ page.header.home_service.subheading|markdown }}</p>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      {% set collection = page.collection('home_service') %}
+
+      {% for post in collection %}
+      <div class="col-3 col-md item text-center">
+        <a href="{{ post.url }}">
+          <img src="{{ post.header.dt_icon }}">
+          <h4>{{ post.title }}</h4>
+        </a>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <footer>
+    <p><span><a href="{{ page.header.home_service.footer.url }}">{{ page.header.home_service.footer.title }}</a></span></p>
+  </footer>
+</div>
+
+<div class="parallax d-flex align-items-center hidden-md-down">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <h3 class="col-md-8"><mark>{{ page.header.parallax }}</mark></h3>
+    </div>
+  </div>
+</div>
+
+
+<div class="home-projects" id="projects">
+  <header class="d-flex flex-column">
+    <div class="title">{{ page.header.home_porto.title }}</div>
+    <p>{{ page.header.home_porto.subheading|markdown }}</p>
+  </header>
+
+  <div class="container-fluid">
+  <div class="row">
+    {% set collection = page.collection('home_porto') %}
+
+    {% for post in collection %}
+      <div class="col-6 col-md-4 item">
+        <a href="{{ post.url }}">
+          <div class="portfolio-thumb">
+            <img src="{{ post.url }}/thumb.jpg" class="img-fluid" alt="Portfolio">
+            <div class="portfolio-overlay">
+              <div class="portfolio-item">
+                <h3>{{ post.title }}</h3>
+                {% if post.header.subheading %}
+                <small>{{ post.header.subheading }}</small>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+
+  <footer>
+      <p><span><a href="{{ page.header.home_porto.footer.url }}">{{ page.header.home_porto.footer.title }}</a></span></p>
+  </footer>
+</div>
+
+
+
+
+<!-- start located map Section -->
+<section class="bogel_maps">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="map">
+			<h1>LOCATED THE MAP</h1><a href="#slidingDiv" class="show_hide" rel="#slidingDiv"><i class="fa fa-angle-up"></i></a>
+			<div id="slidingDiv">
+				<div class="map_area">
+					<div id="googleMap" style="width:100%;height:300px;"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+</div>
+{% endblock %}

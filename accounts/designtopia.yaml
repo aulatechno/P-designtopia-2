@@ -1,0 +1,15 @@
+email: designtopia.id@gmail.com
+fullname: designtopia
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: 'true'
+    cache: 'true'
+    pages: 'true'
+    maintenance: 'true'
+    statistics: 'true'
+  site:
+    login: 'true'
+hashed_password: $2y$10$GxuVwUoJCEC4A/FMasXCJevpaLL/pNSZZxGJrvAfartJvAHmdVTsS
+language: en
